@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o $CFILE -E
+gcc -o $CFILE -E "bash\n"
