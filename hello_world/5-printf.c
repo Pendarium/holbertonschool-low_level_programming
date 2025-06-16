@@ -15,7 +15,7 @@ int main(void)
 * Description: Cette fonction sert a imprimé sans retour a la ligne.
 *
 */
-printf("with proper grammar, but the outcome is a piece of art,%s\n");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 
 return (0);
 }
