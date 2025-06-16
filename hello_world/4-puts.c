@@ -1,21 +1,23 @@
 #include <stdio.h>
-    /*
-    *#include <stdio.h> = ajouter a la bibliotheque standard
-    */
+
 int main(void)
-    /*
-    *int main = (point de depart)
-    */
+
+/**
+ * main - Point d'entrée du programme
+ *
+ * Description: Cette fonction est le point de départ du programme.
+ * Elle exécute les instructions principales et retourne 0 si tout
+ * s'est bien passé.
+ *
+ * Return: 0 si le programme se termine correctement
+ */
 {
+
 puts("\"Programming is like building a multilingual puzzle");
-    /*
-    *puts = permet d'afficher du texte avec \n automatique a la fin
-    */
+
 
 return (0);
 
-    /*
-    *reviens a 0
-    */
+
 
 }
