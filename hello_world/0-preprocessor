@@ -1,2 +1,3 @@
 #!/bin/bash
-export CFILE=main.c | gcc -o $CFILE -E "bash\n"
+export CFILE=main.c;
+gcc -o $CFILE -E "bash\n"
