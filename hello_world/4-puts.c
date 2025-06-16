@@ -8,10 +8,10 @@
  *
  * Return: 0 si le programme se termine correctement
  */
- 
+
 int main()
 {
-puts(' Programming is like building a multilingual puzzle' );
+puts("\"Programming is like building a multilingual puzzle");
 
 return (0);
 
