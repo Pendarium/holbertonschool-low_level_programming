@@ -15,6 +15,7 @@ for (s = '0'; s <= '9'; s++)
 printf("%d\n", s);
 }
 putchar(s);
+putchar('\n');
 
 return (0);
 }
