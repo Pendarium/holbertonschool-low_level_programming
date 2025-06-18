@@ -11,14 +11,15 @@ int main(void)
 int af;
 int nb;
 
-for (af = 'a'; af <= 'f'; af++)
-{
-putchar(af);
-}
 for (nb = '0'; nb <= '9'; nb++)
 {
 putchar(nb);
 }
+for (af = 'a'; af <= 'f'; af++)
+{
+putchar(af);
+}
+
 putchar('\n');
 
 return (0);
