@@ -10,7 +10,7 @@ int _isalpha(int c)
 {
 if (isalpha(c))
 {
-printf("%d\n",c);
+_putchar(c);
 return (1);
 }
 
