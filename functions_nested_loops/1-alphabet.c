@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*main - Point d'entrée du programme
+*print_alphabet - Point d'entrée du programme
 *
 *Description: Cette fonction est le point de départ du programme.
 *
