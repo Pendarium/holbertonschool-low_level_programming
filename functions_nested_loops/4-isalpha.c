@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _islower - Vérifie si un caractère est une lettre minuscule.
+* _isalpha - Vérifie si un caractère est une lettre minuscule.
 * @c: Le caractère à tester (en code ASCII).
 *
 *Return: 1 si le caractère est une lettre minuscule (entre 'a' et 'z').
