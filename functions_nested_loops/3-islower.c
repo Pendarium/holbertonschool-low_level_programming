@@ -1,22 +1,21 @@
 #include "main.h"
 /**
-*print_alphabet_x10 - Point d'entrée du programme
+* _islower - Vérifie si un caractère est une lettre minuscule.
+* @c: Le caractère à tester (en code ASCII).
 *
-*Description: Cette fonction est le point de départ du programme.
+*Return: 1 si le caractère est une lettre minuscule (entre 'a' et 'z').
 *
-*Return: 0 si le programme se termine correctement
 */
 int _islower(int c)
 {
-int islower(c);
-
+;
 if (c >= 'a' && c <= 'z')
 {
-    return (1);
+return (1);
 }
-else 
+else
 {
-    return (0);
+return (0);
 }
 
 
