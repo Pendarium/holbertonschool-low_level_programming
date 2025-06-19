@@ -10,10 +10,10 @@ int _isalpha(int c)
 {
 if (isalpha(c))
 {
-_putchar(c);
+putchar(c);
 return (1);
 }
-
+else
 {
 return (0);
 }
