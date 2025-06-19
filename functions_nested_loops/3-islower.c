@@ -8,18 +8,17 @@
 */
 int _islower(int c)
 {
-int nb;
+int islower(c);
 
-for (nb = '0'; nb <= '9'; nb++)
+if (c >= 'a' && c <= 'z')
 {
-putchar(nb);
-if (nb < '9')
-{
-putchar(',');
-putchar(' ');
+    return (1);
 }
+else 
+{
+    return (0);
 }
 
-putchar('\n');
+
 
 }
