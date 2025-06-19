@@ -6,7 +6,7 @@
 *Return: 1 si le caractère est une lettre minuscule (entre 'a' et 'z').
 *
 */
-int _isalpha(int a);
+int _isalpha(int a)
 {
 if ()
 {
