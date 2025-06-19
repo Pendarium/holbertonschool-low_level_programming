@@ -6,7 +6,7 @@
 *
 *Return: 0 si le programme se termine correctement
 */
-int main(void)
+void print_alphabet(void)
 {
 
 int az;
@@ -17,5 +17,5 @@ _putchar(az);
 }
 _putchar('\n');
 
-return (0);
+
 }
