@@ -6,14 +6,14 @@
 *Return: 1 si le caractère est une lettre minuscule (entre 'a' et 'z').
 *
 */
-int _isalpha(int c);
-
-if (isalpha(c))
+int _isalpha(int a);
 {
-    return (1);
+if ()
+{
+return (1);
 }
 else
 {
-    return (0);
+return (0);
 }
 }
