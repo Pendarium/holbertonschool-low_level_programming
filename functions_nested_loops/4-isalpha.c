@@ -10,7 +10,7 @@ int _isalpha(int c)
 {
 if (isalpha(c))
 {
-putchar(c);
+write (1,&c,1);
 return (1);
 }
 else
