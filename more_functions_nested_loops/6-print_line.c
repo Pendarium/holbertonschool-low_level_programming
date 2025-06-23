@@ -1,9 +1,7 @@
 #include "main.h"
 /**
-*more_numbers - Entry point
-* facteur1: premier facteur de la multiplication
-* facteur2: second facteur de la multiplication
-* produit: resultat de la division
+*print_line - Entry point
+* @n:jiohbvrf
 *
 *Écrivez une fonction qui imprime la table de multiplication par 9,
 *en commençant par 0.
