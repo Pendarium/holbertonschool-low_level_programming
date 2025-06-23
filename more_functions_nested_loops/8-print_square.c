@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *print_square - Entry point
-* @size:jiohbvrf
+* @:jiohbvrf
 *
 *Écrivez une fonction qui imprime la table de multiplication par 9,
 *en commençant par 0.
