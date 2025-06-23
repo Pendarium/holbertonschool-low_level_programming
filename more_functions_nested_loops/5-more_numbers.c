@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* times_table - Entry point
+*more_numbers - Entry point
 * facteur1: premier facteur de la multiplication
 * facteur2: second facteur de la multiplication
 * produit: resultat de la division
@@ -13,16 +13,17 @@
 
 void more_numbers(void)
 {
-int n;
-int i = 14; 
-for (n = '0'; n <= i ; n++)
+int n, i;
+
+for (n = 0; n <= 10; n++)
 {
-    if (n < '9')
-    {
-_putchar((n / 10) + '0');
-_putchar((n % 10) + '0');
-    }
-else 
-_putchar(n);
+for (i = 0; i <= 14; i++)
+{
+if (i >= 10)
+
+_putchar('0' + (i / 10));
+_putchar('0' + (i % 10));
+}
+_putchar('\n');
 }
 }
