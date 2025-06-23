@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*print_most_numbers - Point d'entrée du programme
+*main - Point d'entrée du programme
 *
 *Description: Cette fonction est le point de départ du programme.
 *
