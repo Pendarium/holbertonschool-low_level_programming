@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*main - Point d'entrée du programme
+*print_most_numbers - Point d'entrée du programme
 *
 *Description: Cette fonction est le point de départ du programme.
 *
@@ -10,7 +10,7 @@
 int main(void)
 {
 int n;
-for (n = 1; n <= 100; n++)
+for (n = 1; n <= 99; n++)
 {
 if (n % 15 == 0)
 {
@@ -29,6 +29,7 @@ else
 printf("%d ", n);
 }
 }
+printf("Buzz");
 putchar('\n');
 return (0);
 }
