@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*void print_diagonal - Entry point
+*print_diagonal - Entry point
 * @n:jiohbvrf
 *
 *Écrivez une fonction qui imprime la table de multiplication par 9,
