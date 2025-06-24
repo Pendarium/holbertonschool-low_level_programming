@@ -1,15 +1,21 @@
 #include "main.h"
 /**
-*reset_to_98 - Entry point
-* @n:jiohbvrf
+*_strlen - Entry point
+* @s:jiohbvrf
 *
 *Écrivez une fonction qui imprime la table de multiplication par 9,
 *en commençant par 0.
 *
 *return (0)
 */
+int _strlen(char *s)
 
-void reset_to_98(int *n)
 {
-*n = 98;
+int count;
+while (*s != '\0')
+{
+count++;
+s++;
+}
+return (count);
 }

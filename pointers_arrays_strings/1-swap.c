@@ -1,7 +1,8 @@
 #include "main.h"
 /**
-*reset_to_98 - Entry point
-* @n:jiohbvrf
+*swap_int - Entry point
+* @a:jiohbvrf
+* @b:fkpzskv;
 *
 *Écrivez une fonction qui imprime la table de multiplication par 9,
 *en commençant par 0.
@@ -9,7 +10,9 @@
 *return (0)
 */
 
-void reset_to_98(int *n)
+void swap_int(int *a, int *b)
 {
-*n = 98;
+int tmp = *a;
+*a = *b;
+*b = tmp;
 }
