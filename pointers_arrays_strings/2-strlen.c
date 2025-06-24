@@ -1,22 +1,19 @@
 #include "main.h"
 /**
-*_strlen - Entry point
-* @s:jiohbvrf
-*
-*Écrivez une fonction qui imprime la table de multiplication par 9,
-*en commençant par 0.
-*
-*return (0)
-*/
+ * _strlen - Calcule la longueur d'une chaîne de caractères
+ * @s: pointeur vers la chaîne de caractères à mesurer
+ *
+ * Return: la longueur de la chaîne (sans compter le caractère nul),
+ *         ou 0 si le pointeur est NULL
+ */
 int _strlen(char *s)
 {
 char *p;
-    if (s == NULL)
-        return 0;
+if (s == NULL)
+return (0);
 
-    p = s;
-    while (*p != '\0')  
-        p++; 
-
-    return p - s;
+p = s;
+while (*p != '\0')
+p++;
+return (p - s);
 }
