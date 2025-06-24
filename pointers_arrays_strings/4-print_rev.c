@@ -10,19 +10,25 @@
 *return (0)
 */
 
+int _strlen(char *s)
+{
+char *p;
+if (s == NULL)
+return (0);
+
+p = s;
+while (*p != '\0')
+p++;
+return (p - s);
+}
 void print_rev(char *s)
 {
-
-int i = 0;
-int j = strlen(s);
-
-while (i < j) 
-{
-char c = s[i];
-s[i] = s[j];
-s[j] = c;
-i++;
-j--;
+    int i;
+    i = _strlen(s) - 1;
+    while (i >= 0)
+    {
+        _putchar(s[i]);
+        i--;
+    }
+    _putchar('\n');
 }
-_putchar('\n');
-}   
