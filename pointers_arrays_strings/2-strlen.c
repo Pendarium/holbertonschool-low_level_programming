@@ -9,13 +9,14 @@
 *return (0)
 */
 int _strlen(char *s)
+{
+char *p;
+    if (s == NULL)
+        return 0;
 
-{
-int count;
-while (*s != '\0')
-{
-count++;
-s++;
-}
-return (count);
+    p = s;
+    while (*p != '\0')  
+        p++; 
+
+    return p - s;
 }
