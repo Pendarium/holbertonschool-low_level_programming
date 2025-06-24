@@ -26,6 +26,7 @@ return (p - s);
 void rev_string(char *s)
 {
 int i;
+_putchar(*s);
 i = _strlen(s) - 1;
 while (i >= 0)
 {
