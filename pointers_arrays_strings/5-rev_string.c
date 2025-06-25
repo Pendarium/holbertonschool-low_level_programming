@@ -8,17 +8,17 @@
 void rev_string(char *s)
 
 {
-    int right = _strlen(s) - 1;
-    int left = 0;
-    char tmp;
-    while (left < right)
+int right = _strlen(s) - 1;
+int left = 0;
+char tmp;
+while (left < right)
 {
-    tmp = s[left];
-    s[left] = s[right];
-    s[right] = tmp;
-    
-    left++;
-    right--;
+tmp = s[left];
+s[left] = s[right];
+s[right] = tmp;
+
+left++;
+right--;
 }
 
 
