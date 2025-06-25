@@ -13,6 +13,7 @@ int left = 0;
 char tmp;
 while (left < right)
 {
+    
 tmp = s[left];
 s[left] = s[right];
 s[right] = tmp;
