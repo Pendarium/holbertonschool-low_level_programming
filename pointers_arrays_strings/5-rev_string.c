@@ -7,15 +7,15 @@
 */
 int _strlen(char *s)
 {
-    char *p;
-    if (s == NULL)
-        return (0);
-    p = s;
-    while (*p != '\0')
-    {
-        p++;
-    }
-        return (p - s);
+char *p;
+if (s == NULL)
+return (0);
+p = s;
+while (*p != '\0')
+{
+p++;
+}
+return (p - s);
 }
 /**
 * rev_string - Inverse une chaîne de caractères
@@ -26,15 +26,15 @@ int _strlen(char *s)
 */
 void rev_string(char *s)
 {
-    int left = 0;
-    int right = _strlen(s) - 1;
-    char tmp;
-    while (left < right)
-    {
-        tmp = s[left];
-        s[left] = s[right];
-        s[right] = tmp;
-        left++;
-        right--;
-    }
+int left = 0;
+int right = _strlen(s) - 1;
+char tmp;
+while (left < right)
+{
+tmp = s[left];
+s[left] = s[right];
+s[right] = tmp;
+left++;
+right--;
+}
 }
