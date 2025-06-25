@@ -1,42 +1,44 @@
 #include "main.h"
-/**
- * _strlen - Calcule la longueur d'une chaîne de caractères
- * @s: pointeur vers la chaîne de caractères à mesurer
- *
- * Return: la longueur de la chaîne (sans compter le caractère nul),
- *         ou 0 si le pointeur est NULL
- */
-int _strlen(char *s)
-{
-char *p;
-if (s == NULL)
-return (0);
-
-p = s;
-while (*p != '\0')
-p++;
-return (p - s);
-}
 
 /**
-* puts_half - Inverse une chaîne de caractères
+*puts_half - entry
+*@str:
 *
-*@str:coijaecio
+*Écrivez une fonction qui affiche la moitié d'une chaîne,
+*suivie d'un saut de ligne.
 *
-* Cette fonction échange les caractères de la chaîne en place,
-* du début vers la fin, pour obtenir la version inversée de la chaîne.
+*La fonction doit afficher la seconde moitié de la chaîne.
+*Si le nombre de caractères est impair, la fonction doit
+*afficher les n derniers caractères de la chaîne,
+*où n = (length_of_the_string + 1) / 2
 */
+
 void puts_half(char *str)
-{
-int c = _strlen(str) - 1;
-int i = c / 2;
 
-
-for (c = 0; str[c] != '\0'; c++)
 {
-if (str[c] / 2 < str[i])
-i++;
-_putchar(str[i]);
-}
+int length = 0; /*longueur de la chaine de caratère*/
+int index = 0;/*position sur la chaine de caractère*/
+int half;/*moitier de la chaine*/
+
+while (str[index++])
+	length++;
+
+/*verification si paire our impaire odd = size/2 +1*/
+half = length / 2;
+
+if ((length % 2) == 0)
+	{
+	half = length / 2;
+	}
+else
+	{
+	half = (length + 1) / 2;
+	}
+
+	/*sortie*/
+for (index = half; index < length ; index++)
+	{
+	_putchar(str[index]);
+	}
 _putchar('\n');
 }
