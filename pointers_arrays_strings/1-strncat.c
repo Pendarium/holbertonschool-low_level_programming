@@ -20,7 +20,7 @@ while (dest[j] != '\0')
 j++;
 /* Incrémente l'indice pour passer au caractère suivant */
 }
-while (i <= n && src[i] != 0)
+while (i < n && src[i] != 0)
 /* Parcourt chaque caractère de src jusqu'au caractère nul */
 {
 dest[j] = src[i];
