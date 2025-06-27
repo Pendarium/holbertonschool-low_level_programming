@@ -1,9 +1,7 @@
 #include "main.h"
-/* Inclusion du fichier d'en-tête contenant les prototypes */
-
 /**
- * _strncpy - Copie au maximum n caractères
- * d'une chaîne source vers une chaîne destination
+ * _strncpy - Copie au maximum n caractères d'une
+ * /*chaîne source vers une chaîne destination
  * @dest: Chaîne de destination
  * @src: Chaîne source
  * @n: Nombre maximum de caractères à copier
@@ -23,14 +21,11 @@ dest[i] = src[i];
 /* Affectation du caractère courant de src à dest */
 
 
-if (i < n)
-{
-i++;
-/* Remplir le reste de dest avec des caractères */
+for ( ; i < n ; i++)
+/* Remplir le reste de dest avec des caractères*/
 /*nuls si src est plus court que n */
 dest[i] = '\0';
 /* Ajout d'un caractère nul à la position i de dest */
-}
 
 return (dest);
 /* Retourne le pointeur vers la chaîne de destination */
