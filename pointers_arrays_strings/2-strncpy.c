@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strncpy - Copie au maximum n caractères d'une
- * /*chaîne source vers une chaîne destination
+ * chaîne source vers une chaîne destination
  * @dest: Chaîne de destination
  * @src: Chaîne source
  * @n: Nombre maximum de caractères à copier
