@@ -14,7 +14,7 @@ int i = 0;
 int j = 0;
 /* Initialise un compteur i à 0 pour l'utilisation dans la boucle */
 while (dest[j] != '\0')
-/* Parcourt chaque caractère de src jusqu'au caractère nul */
+/* Parcourt chaque caractère de dest jusqu'au caractère nul */
 {
 j++;
 /* Incrémente l'indice pour passer au caractère suivant */
@@ -23,7 +23,7 @@ while (src[i] != '\0')
 /* Parcourt chaque caractère de src jusqu'au caractère nul */
 {
 dest[j] = src[i];
-/* Copie le caractère courant de src vers dest */
+/* Copie le caractère courant dest vers src */
 i++;
 j++;
 /* Incrémente l'indice pour passer au caractère suivant */
