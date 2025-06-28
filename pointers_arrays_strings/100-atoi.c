@@ -1,28 +1,66 @@
 #include "main.h"
 
+/**
+ * _atoi - Convertit une chaîne en entier
+ * @s: chaîne à convertir en entier
+ * Return: entier obtenu à partir de la chaîne
+ */
+
 int _atoi(char *s)
-int _atoi(const char *str) /* Déclaration de la fonction _atoi qui prend une chaîne en entrée et retourne un entier */
+
 {
-    int i = 0; /* Initialisation de l'index i pour parcourir la chaîne */
-    int sign = 1; /* Variable pour stocker le signe du nombre (1 par défaut, -1 si négatif) */
-    int result = 0; /* Variable pour stocker le résultat final (l'entier converti) */
+	int i = 0;
+    /* Index pour parcourir la chaîne */
+	unsigned int num = 0;
+    /* Stocke la valeur numérique trouvée */
+	int sign = 1;
+    /* Signe du nombre (positif ou négatif) */
+	int fnd_dig = 0;
+    /* Indique si un chiffre a été trouvé */
 
-    /* Ignorer les espaces blancs au début */
-    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n') /* Tant qu'on trouve des espaces, tabulations ou retours à la ligne */
-        i++; /* On avance dans la chaîne */
+	while (s[i] == ' ')
+    /* Ignore les espaces au début de la chaîne */
+	{
+		i++;
+        /* Passe au caractère suivant */
+	}
 
-    /* Gérer le signe + ou - */
-    if (str[i] == '-' || str[i] == '+') /* Si le caractère actuel est un signe */
-    {
-        if (str[i] == '-') /* Si c'est un signe moins */
-            sign = -1; /* On change le signe du résultat en négatif */
-        i++; /* On passe au caractère suivant */
-    }
+	while (s[i] != '\0')
+    /* Parcourt la chaîne jusqu'à la fin */
+	{
+		if (s[i] == '-')
+        /* Vérifie si le caractère est un '-' */
+		{
+			sign *= -1;
+            /* Change le signe du nombre */
+		}
+		if (s[i] >= '0' && s[i] <= '9')
+        /* Si le caractère est un chiffre */
+		{
+			num = num * 10 + (s[i] - '0');
+            /* Construit le nombre */
+			fnd_dig = 1;
+            /* Marque qu'un chiffre a été trouvé */
+		}
+		else if (fnd_dig)
+        /* Si un chiffre a déjà été trouvé */
+		{
+			break;
+            /* Arrête l'analyse à la première rupture */
+		}
 
-    /* Convertir les chiffres */
-    while (str[i] >= '0' && str[i] <= '9') /* Tant que le caractère est un chiffre entre '0' et '9' */
-    {
-        result = result * 10 + (str[i] - '0'); /* On multiplie le résultat courant par 10 et on ajoute la valeur du chiffre */
-        i++; /* On passe au caractère suivant */
-    }
+		i++;
+        /* Passe au caractère suivant */
+	}
+
+	if (!fnd_dig)
+    /* Si aucun chiffre n’a été trouvé */
+		return (0);
+        /* Retourne 0 */
+
+	return (num * sign);
+    /*Retourne le nombre avec le bon signe */
+    
 }
+
+
