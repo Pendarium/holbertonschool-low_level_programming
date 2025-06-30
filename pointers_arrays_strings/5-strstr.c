@@ -1,5 +1,12 @@
 #include "main.h"
-
+/**
+ * _strstr - Copie n octets depuis la source vers la destination
+ * @haystack: pointeur vers la zone de destination
+ * @needle: pointeur vers la zone source
+ * @: nombre d'octets à copier
+ *
+ * Return: pointeur vers la mémoire remplie (s)
+ */
 char *_strstr(char *haystack, char *needle)
 
 {
