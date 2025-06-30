@@ -10,20 +10,21 @@
 char *_strstr(char *haystack, char *needle)
 
 {
-	while (*haystack)
-	/* Tant qu'on n'atteint pas le \0 */
-	{
-		if (*haystack == *needle)
-		/* Si le caractère courant est égal à c */
-			return ((char *)haystack);
-			/* On retourne un pointeur vers ce caractère */
-	haystack++;
-		/* Sinon on avance dans la chaîne */
-	}
+	int i;
+
 	if (*needle == '\0')
-	/* Si on cherche le caractère nul */
-		return ((char *)haystack);
-		/* Retourne pointeur vers le \0 final */
+		return (haystack);
+
+	while (*haystack)
+	{
+		for (i = 0; needle[i]; i++)
+		{
+			if (haystack[i] != needle[i])
+				break;
+		}
+		if (needle[i] == '\0')
+			return (haystack);
+		haystack++;
+	}
 	return (NULL);
-	/* Si on ne trouve pas, retourne NULL */
 }
