@@ -37,7 +37,7 @@ int _atoi(char *s)
 		if (s[i] >= '0' && s[i] <= '9')
         /* Si le caractère est un chiffre */
 		{
-			num = num * 10 + (s[i] - '0');
+			m = num * 10 + (s[i] - '0');nu
             /* Construit le nombre */
 			fnd_dig = 1;
             /* Marque qu'un chiffre a été trouvé */
