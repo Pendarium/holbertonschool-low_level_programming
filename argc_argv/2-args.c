@@ -16,8 +16,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < argc; i++)
 	/* Boucle pour parcourir tous les arguments */
 	{
-		puts(argv[i]);
-		printf("\n");
+		printf("%s\n", argv[i]);
 	/* Affiche chaque argument sur une ligne distincte */
 	}
 	return (0);
