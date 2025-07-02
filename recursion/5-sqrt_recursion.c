@@ -14,12 +14,12 @@ int _fonction_aux(int n, int racine)
 {
 	if (racine * racine == n)
 	{
-		/* Racine carrée exacte trouvée */
+	/* Racine carrée exacte trouvée */
 		return (racine);
 	}
 	if (racine * racine > n)
 	{
-		/* Pas de racine carrée entière pour n */
+	/* Pas de racine carrée entière pour n */
 		return (-1);
 	}
 	/* Appel récursif avec racine incrémentée */
@@ -39,7 +39,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
-		/* Racine carrée non définie pour les nombres négatifs */
+	/* Racine carrée non définie pour les nombres négatifs */
 		return (-1);
 	}
 	/* Recherche de la racine carrée entière en commençant à 1 */
