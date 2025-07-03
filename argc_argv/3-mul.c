@@ -9,14 +9,14 @@
 int main(int argc, char *argv[])
 /* Fonction principale avec les paramètres argc et argv */
 {
-	int total;
-	/* Déclaration de la variable total pour le résultat */
-
 	int un;
 	/* Déclaration de la variable un (premier entier) */
 
 	int deu;
 	/* Déclaration de la variable deu (deuxième entier) */
+
+	int total;
+	/* Déclaration de la variable total pour le résultat */
 
 	if (argc != 3)
 	/* Vérifie si le nombre d'arguments est différent de 3 */
