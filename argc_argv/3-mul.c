@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	/* Vérifie si le nombre d'arguments est différent de 3 */
 	{
-		printf("Erreur\n");
+		printf("Error\n");
 		/* Affiche un message d'erreur */
 
 		return (1);
