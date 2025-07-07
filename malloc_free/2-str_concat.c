@@ -115,23 +115,35 @@ return (dest);
 char *str_concat(char *s1, char *s2)
 {
 	size_t len1, len2, total_length;
+	/* Déclaration des longueurs et total */
 	char *array;
+	/* Pointeur vers la nouvelle chaîne allouée */
 
 	if (s1 == NULL)
 		{
 		s1 = "";
+		/* Si s1 est NULL, le traiter comme chaîne vide */
 		}
 	if (s2 == NULL)
 	{
 		s2 = "";
+		/* Si s2 est NULL, le traiter comme chaîne vide */
 	}
 	len1 = _strlen(s1);
+	/* Calcul de la longueur de s1 */
 	len2 = _strlen(s2);
+	/* Calcul de la longueur de s2 */
 	total_length = len1 + len2 + 1;
+	/* Longueur totale + '\0' */
 	array = malloc(total_length * sizeof(char));
+	/* Allocation mémoire */
 	if (array == NULL)
 		return (NULL);
+		/* Retourner NULL si l'allocation échoue */
 	_strncpy(array, s1, _strlen(s1));
+	/* Copier s1 dans array */
 	_strcat(array, s2);
+	/* Concaténer s2 à la fin de array */
 	return (array);
+	/* Retourner le pointeur vers la chaîne résultante */
 }
