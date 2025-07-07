@@ -19,7 +19,7 @@ void free_grid(int **grid, int height)
 		{
 		free(grid[i]);
 		/* libère chaque ligne */
-		}
 		free(grid);
 		/* libère le tableau principal */
+		}
 }
