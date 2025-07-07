@@ -37,6 +37,7 @@ int main(void)
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     char *s = "hello, world";
