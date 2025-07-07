@@ -76,7 +76,6 @@ return (p - s);
  */
 
 char *_strdup(char *str)
-char *_strdup(char *str)
 {
 	    char *copy = malloc(_strlen(str) + 1);
     /* Alloue de la mémoire pour la copie de str (+1 pour le '\0') */
