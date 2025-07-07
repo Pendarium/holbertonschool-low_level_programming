@@ -80,7 +80,7 @@ char *_strdup(char *str)
 	    char *copy = malloc(_strlen(str) + 1);
     /* Alloue de la mémoire pour la copie de str (+1 pour le '\0') */
 	if (str == NULL)
-		return(NULL);
+		return (NULL);
 	if (copy)
 	_strncpy(copy, str, _strlen(str) + 1);
 	/* Copie la chaîne str dans copy, y compris le caractère nul final */
