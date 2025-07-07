@@ -16,7 +16,10 @@ void free_grid(int **grid, int height)
 	int i; /* index pour parcourir les lignes */
 
 	for (i = 0; i < height; i++)
-		free(grid[i]); /* libère chaque ligne */
-
-		free(grid); /* libère le tableau principal */
+		{
+		free(grid[i]);
+		/* libère chaque ligne */
+		}
+		free(grid);
+		/* libère le tableau principal */
 }
