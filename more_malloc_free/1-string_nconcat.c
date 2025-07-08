@@ -146,6 +146,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	_strncpy(array, s1, len1);
 	/* Copier s1 dans array */
+	array[len1] = '\0';
+	/* On s'assure que la chaîne est bien terminée après s1 */
 	_strncat(array, s2, n);
 	/* Concaténer les n premiers caractères de s2 à array */
 
