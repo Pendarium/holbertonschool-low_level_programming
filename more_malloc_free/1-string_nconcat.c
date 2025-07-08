@@ -144,7 +144,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	/* Retourner NULL si l'allocation échoue */
 
-	_strncpy(array, s1, _strlen(s1));
+	_strncpy(array, s1, len1);
 	/* Copier s1 dans array */
 	_strncat(array, s2, n);
 	/* Concaténer les n premiers caractères de s2 à array */
