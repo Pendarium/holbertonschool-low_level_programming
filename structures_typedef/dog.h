@@ -7,12 +7,22 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * struct dog - Structure qui décrit un chien
+ * @name: Nom du chien (chaîne de caractères)
+ * @age: Âge du chien (nombre à virgule flottante)
+ * @owner: Nom du propriétaire du chien (chaîne de caractères)
+ *
+ * Description : Cette structure contient les informations de base
+ * sur un chien : son nom, son âge et le nom de son propriétaire.
+ * dog_t - Type défini comme un alias de la structure struct dog
+ */
 
 struct dog
 {
-	char * name;
+	char *name;
 	float age;
-	char * owner;
+	char *owner;
 };
 
 typedef struct dog dog_t;
