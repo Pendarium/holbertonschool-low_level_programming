@@ -14,16 +14,17 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-if (d == NULL)
-return;
+if (d != NULL)
+{
 /* Vérifie si le pointeur est NULL, retourne sans rien faire */
 
-d->name;
+d->name = name;
 /* Affecte le nom du chien à la structure (à corriger pour être utile) */
 
-d->age;
+d->age = age;
 /* Affecte l'âge du chien à la structure (à corriger pour être utile) */
 
-d->owner;
+d->owner = owner;
 /* Affecte le nom du propriétaire à la structure (à corriger aussi) */
+}
 }
