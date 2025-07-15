@@ -31,5 +31,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	for (index = 0; index < size; index++)
 	/* Parcourt le tableau et applique l'action à chaque élément */
 	action(array[index]);
+	
 
 }
