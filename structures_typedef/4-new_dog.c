@@ -51,14 +51,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* Allocation mémoire pour une structure dog_t */
 	if (god == NULL)
 	{
-		return (NULL);	/* Retourne NULL si l'allocation a échoué */
+		return (NULL);
+		/* Retourne NULL si l'allocation a échoué */
 	}
 	god->name = (char *)malloc(_strlen(name) + 1);
 	/* Allocation mémoire pour le nom du chien */
 	if (god->name == NULL)
 	{
-		free(god);	/* Libère la mémoire allouée à la structure */
-		return (NULL);/* Retourne NULL si l'allocation du nom a échoué */
+		free(god);
+		/* Libère la mémoire allouée à la structure */
+		return (NULL);
+		/* Retourne NULL si l'allocation du nom a échoué */
 	}
 	else
 	for (i = 0; i <= _strlen(name); i++)
@@ -72,7 +75,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(god->name);
 		/* Libère la mémoire du nom si l'allocation du owner échoue */
-		free(god);/* Libère la structure */
+		free(god);
+		/* Libère la structure */
 		return (NULL);
 		/* Retourne NULL si l'allocation du owner a échoué */
 	}
@@ -82,6 +86,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		god->owner[i] = owner[i];
 	}
 	/* Copie chaque caractère du propriétaire dans la structure */
-	god->age = age;/* Assigne l'âge du chien */
-	return (god);/* Retourne un pointeur vers la nouvelle structure dog_t */
+	god->age = age;
+	/* Assigne l'âge du chien */
+	return (god);
+	/* Retourne un pointeur vers la nouvelle structure dog_t */
 }
