@@ -11,6 +11,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
-	/* Appelle la fonction pointée avec le nom en argument */
+f(name);
+/* Appelle la fonction pointée avec le nom en argument */
 }
