@@ -1,3 +1,4 @@
+#include "3-calc.h"
 /**
  * main - programme principal qui exécute une opération arithmétique
  * @argc: nombre d'arguments passés au programme
@@ -6,8 +7,8 @@
  * Return: 0 en cas de succès, sinon termine avec un code d'erreur
  */
 
-#include "3-calc.h"
 
+ 
 int main(int argc, char *argv[])
 {
 	int num1, num2;
