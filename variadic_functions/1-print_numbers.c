@@ -16,10 +16,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list args;
 	/* Déclaration de la liste d'arguments */
 
-	if (separator == NULL)
-	return;
-	/* Si le séparateur est NULL, ne rien faire */
-
 	va_start(args, n);
 	/* Initialisation de la liste */
 
