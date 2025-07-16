@@ -28,7 +28,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", va_arg(args, int));
 		/* Affiche l'entier suivant dans la liste */
 
-			if (index < n - 1 && separator != NULL)
+			if (separator != NULL && index < n - 1)
 			{
 			printf("%s", separator);
 			/* Affiche le séparateur sauf après le dernier nombre */
