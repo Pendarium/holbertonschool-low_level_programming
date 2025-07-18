@@ -21,10 +21,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
     		printf("(nil)");
 			}
-			
+
 			else
 			{
-			printf("%s", va_arg(args, char*));
+			printf("%s", str);
 			/* Affiche l'entier suivant dans la liste */
 			}
 
