@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
- * create_file - Creates a file and writes content into it
- * @filename: Name of the file to create
- * @text_content: NULL-terminated string to write into the file
+ * create_file - Crée un fichier et y écrit une chaîne de caractères
+ * @filename: Nom du fichier à créer
+ * @text_content: Chaîne de caractères
+ * à écrire dans le fichier (peut être NULL)
  *
- * Return: 1 on success, -1 on failure (e.g. if file can't be created or written)
+ * Return: 1 en cas de succès, -1 en cas d'échec
+ * (création ou écriture impossible)
  *
- * Description:
- * If the file exists, its content is truncated. If it doesn't exist, it's created
- * with permissions rw------- (0600). If filename is NULL, return -1.
- * If text_content is NULL, create an empty file.
  */
 
 int create_file(const char *filename, char *text_content)
@@ -21,26 +19,22 @@ int create_file(const char *filename, char *text_content)
 
 	/* Vérifie si le nom de fichier est NULL */
 	if (filename == NULL)
-		return (-1);
-		/* Retourne -1 si aucun nom de fichier fourni */
+		return (-1); /* Échec si aucun nom de fichier n'est fourni */
 
-	/* Ouvre ou crée le fichier en écriture, tronque s'il existe, permissions rw------- */
+	/* Ouvre le fichier en écriture seule, le crée*/
+	/*s'il n'existe pas, et le tronque s'il existe */
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	/* Vérifie si l'ouverture du fichier a échoué */
 	if (file == -1)
-		return (-1);
-		/* Retourne -1 en cas d'erreur à l'ouverture */
-
-	/* Si text_content est NULL, créer un fichier vide */
+		return (-1); /* Échec si le fichier ne peut pas être ouvert ou créé */
+	/* Si aucun contenu à écrire, on crée juste un fichier vide */
 	if (text_content == NULL)
 	{
 		close(file);
-		return (1);
-		/* Succès : fichier créé et vide */
+		return (1); /* Succès : fichier vide créé */
 	}
-
-	/* Calcule la longueur de la chaîne text_content */
+	/* Calcule la longueur de la chaîne à écrire */
 	while (text_content[len] != '\0')
 	{
 		len++;
@@ -48,18 +42,14 @@ int create_file(const char *filename, char *text_content)
 
 	/* Écrit le contenu dans le fichier */
 	written = write(file, text_content, len);
-
-	/* Vérifie si l'écriture a échoué ou partielle */
+	/* Vérifie si l'écriture a échoué ou est incomplète */
 	if (written == -1 || (size_t)written != len)
 	{
 		close(file);
-		return (-1);
-		/* Retourne -1 en cas d'erreur d'écriture */
+		return (-1); /* Échec de l'écriture */
 	}
-
-	/* Ferme le fichier */
+	/* Ferme le fichier après l'écriture */
 	close(file);
-
-	/* Retourne 1 en cas de succès */
+	/* Retourne 1 pour signaler le succès */
 	return (1);
 }
