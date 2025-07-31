@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Entry point of the program
+ * @ac: Argument count
+ * @av: Argument vector (array of strings)
  *
- * Return: Always 0.
+ * Return: 0 on success, 1 if incorrect number of arguments
+ *
  */
 int main(int ac, char **av)
 {
