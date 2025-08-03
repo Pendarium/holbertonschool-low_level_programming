@@ -1,7 +1,11 @@
 #include "main.h"
-
-
-
+/**
+ * cp_file - Copies the contents of one file to another
+ * @file_source: Path to the source file to copy from
+ * @file_destination: Path to the destination file to copy to
+ *
+ * Return: 0 on success, -1 on failure
+ */
 int cp_file(const char *file_source, const char *file_destination)
 {
 	int file_cpy, file_past;
@@ -12,54 +16,53 @@ int cp_file(const char *file_source, const char *file_destination)
 	if (file_cpy == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_source);
-		exit(98);
-	}
-
+		exit(98); }
 	file_past = open(file_destination, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (file_past == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_destination);
 		close(file_cpy);
-		exit(99);
-	}
-
+		exit(99); }
 	do
-	{
 		bytes_read = read(file_cpy, buffer, 1024);
 		if (bytes_read == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_source);
 			close(file_cpy);
 			close(file_past);
-			exit(98);
-		}
-
+			exit(98); }
 		bytes_written = write(file_past, buffer, bytes_read);
 		if (bytes_written == -1 || bytes_written != bytes_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_destination);
 			close(file_cpy);
 			close(file_past);
-			exit(99);
+			exit(99); }
 		}
 
-	} while (bytes_read > 0);
-
+	while (bytes_read > 0)
+	{
 	if (close(file_cpy) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_cpy);
 		exit(100);
 	}
-
 	if (close(file_past) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_past);
 		exit(100);
 	}
-
-	return (0);
 }
+	return (0);
 
+}
+/**
+ * main - Entry point of the program
+ * @ac: Argument count
+ * @av: Argument vector (array of strings)
+ *
+ * Return: 0 on success
+ */
 int main(int ac, char **av)
 {
 	if (ac != 3)
