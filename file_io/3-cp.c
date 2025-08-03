@@ -23,14 +23,8 @@ int cp_file(const char *file_source, const char *file_destination)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_destination);
 		close(file_cpy);
 		exit(99); }
-	do
-		bytes_read = read(file_cpy, buffer, 1024);
-		if (bytes_read == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_source);
-			close(file_cpy);
-			close(file_past);
-			exit(98); }
+	while ((bytes_read = read(file_cpy, buffer, 1024)) > 0)
+	{
 		bytes_written = write(file_past, buffer, bytes_read);
 		if (bytes_written == -1 || bytes_written != bytes_read)
 		{
@@ -39,23 +33,23 @@ int cp_file(const char *file_source, const char *file_destination)
 			close(file_past);
 			exit(99); }
 		}
-
-	while (bytes_read > 0)
+	if (bytes_read == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_source);
+		close(file_cpy);
+		close(file_past);
+		exit(98); }
 	if (close(file_cpy) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_cpy);
-		exit(100);
-	}
+		exit(100); }
 	if (close(file_past) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_past);
-		exit(100);
-	}
-}
-	return (0);
+		exit(100); }
 
-}
+	return (0); }
+
 /**
  * main - Entry point of the program
  * @ac: Argument count
